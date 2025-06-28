@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /output/
+    destination: /opt/tomcat/webapps/
+  - source: /scripts/
+    destination: /opt/deployment/scripts/
+
+hooks:
+  AfterInstall:
+    - location: scripts/deploy_war.sh
+      timeout: 300
+      runas: root
