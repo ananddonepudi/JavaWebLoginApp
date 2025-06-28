@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto11  # or corretto8, openjdk11 — depending on your need
+      java: corretto17  # or corretto8, openjdk11 — depending on your need
     commands:
       - echo Installing Maven...
       - yum install -y maven
